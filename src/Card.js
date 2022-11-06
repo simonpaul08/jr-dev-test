@@ -1,7 +1,7 @@
 import React from 'react'
 import Option from './components/Option'
 
-const Card = ({ currentColor, handleStart, options }) => {
+const Card = ({ currentColor, handleSelectOption, options }) => {
   return (
     <div className='card__container'>
         <div className="card__content">
@@ -13,7 +13,7 @@ const Card = ({ currentColor, handleStart, options }) => {
             <div className="option-block">
                 <div className="option-wrapper" >
                     {options && options.map(opt => {
-                        return <Option handleStart={handleStart} value={opt}/>
+                        return <Option handleSelectOption={handleSelectOption} value={opt}/>
                     })}
                 </div>
             </div>

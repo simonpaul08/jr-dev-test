@@ -9,6 +9,36 @@
     background-color: #EEEEEE;
 }
 
+/* open*/
+.open__card {
+    width: 350px;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 4px;
+    text-align: center;
+}
+.open__card h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.open__card p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.open__card button {
+    font-size: 15px;
+    padding: 10px 25px;
+    /* text-transform: uppercase; */
+    background-color: #4C6793;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+
 
 /* card */
 .card__container {

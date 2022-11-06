@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Option = ({ handleStart, value }) => {
+const Option = ({ handleSelectOption, value }) => {
     return (
         <div className="col-6">
-            <p className='option' onClick={handleStart}>{value ? value : 'Option'}</p>
+            <p className='option' onClick={handleSelectOption}>{value ? value : 'Option'}</p>
         </div>
     )
 }
