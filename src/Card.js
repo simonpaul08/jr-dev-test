@@ -1,7 +1,7 @@
 import React from 'react'
 import Option from './components/Option'
 
-const Card = ({ currentColor, handleSelectOption, options }) => {
+const Card = ({ currentColor, handleSelectOption, options, wrongAnswer }) => {
   return (
     <div className='card__container'>
         <div className="card__content">
@@ -16,6 +16,9 @@ const Card = ({ currentColor, handleSelectOption, options }) => {
                         return <Option handleSelectOption={handleSelectOption} value={opt}/>
                     })}
                 </div>
+                {wrongAnswer && <div className="wrong-answer">
+                    <p>Wrong Answer</p>
+                </div>}
             </div>
         </div>
     </div>

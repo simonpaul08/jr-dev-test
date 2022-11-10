@@ -21,6 +21,7 @@ const Main = ({ setFinished }) => {
     const [remainingColors, setRemainingColors] = useState([])
     const [currentColor, setCurrentColor] = useState('')
     const [options, setOptions] = useState([])
+    const [wrongAnswer, setWrongAnswer] = useState(false)
 
 
     useEffect(() => {
@@ -68,6 +69,7 @@ const Main = ({ setFinished }) => {
         }
 
         newArr.push(currentColor)
+        newArr = newArr.sort((a, b) => 0.5 - Math.random())
         return setOptions(newArr)
     }
 
@@ -75,16 +77,17 @@ const Main = ({ setFinished }) => {
 
     // handle select option
     const handleSelectOption = (e) => {
+        setWrongAnswer(false)
         const option = e.target.textContent
         if (option === currentColor) {
             getRandomColor()
         }else {
-            alert('wrong answer')
+           setWrongAnswer(true)
         }
     }
     return (
         <>
-            {run ? <Card currentColor={currentColor} options={options} handleSelectOption={handleSelectOption} /> : <Open handleStart={handleStart} />}
+            {run ? <Card currentColor={currentColor} options={options} handleSelectOption={handleSelectOption} wrongAnswer={wrongAnswer}/> : <Open handleStart={handleStart} />}
         </>
     )
 }
